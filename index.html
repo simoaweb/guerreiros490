@@ -78,25 +78,6 @@
                         <img src="media/ita.PNG" alt="Itaú" width="50px">
                         <img src="media/boleto.PNG" alt="Boleto" width="50px">
                     </center>
-                    <div class="icon-block center" id="label1">
-                        <h2 class="center orange-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">PROMOÇÃO! - MENSALIDADE SEMESTRAL</h5>
-                        <p class="light">Regularize sua mensalidade, campanha promocional válida até dia 14 de Setembro de 2019</p>
-                        <b>
-                            <p id="count"></p>
-                        </b>
-                        <h6>
-                            <i>de: <strike>R$30,00</strike></i>
-                        </h6>
-                        <h6>
-                            <b>Por: *R$21,47</b>
-                        </h6>
-                        <center>
-                            <!-- INICIO DO BOTAO PAGSEGURO --><a href="https://pag.ae/7VfyxYrzq/button" target="_blank" title="Pagar com PagSeguro"><img src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/95x45-pagar-preto.gif" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></a><!-- FIM DO BOTAO PAGSEGURO -->
-                            <br><sub><i>*Caso boleto, acrécimo de R$1,00</i></sub>
-                        </center>
-                        <br>
-                    </div>
                     <br>
                 </div>
 
@@ -190,36 +171,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Sep 14, 2019 23:59:59").getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result in an element with id="demo"
-            document.getElementById("count").innerHTML = days + "dias " + hours + "horas " +
-                minutes + "minutos " + seconds + "s ";
-
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("count").innerHTML = "Procure o MC";
-            }
-        }, 1000);
-    </script>
 </body>
 
 </html>
