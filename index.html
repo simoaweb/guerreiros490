@@ -63,24 +63,58 @@
 
             <!--   Icon Section   -->
             <div class="row">
-                    <div class="col s12 m3">
-                    <!--
+                <h4 class="center">Regularização 2021</h4>
+                <h5 class="center">Valor Fixo: <b>R$60,00</b></h5>
+                <br>
+                    <div class="col s12 m6">
                     <div class="icon-block center" id="label2">
+                        
                         <h2 class="center red-text"><i class="material-icons">autorenew</i></h2>
-                        <h5 class="center">Mensalidade Automática 2019</h5>
-                        <p class="light">Para a comodidade dos pais, responsáveis e organização administrativa, oferecemos o pagamento da mensalidade através do cartão de crédito de forma automática, sendo assim, será debitado até o último mês do ano.<br> <sub>Obs: Caso necessário, poderá ser cancelado a qualquer momento.</sub></p>
-                        <h6>
-                            <b>R$5,68/mês</b>
-                        </h6>
-                        <center>
-                            <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
-                                <input type="hidden" name="code" value="5D28BDE8B5B51E0774041FA3B0524ADB" />
-                                <input type="hidden" name="iot" value="button" />
-                                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/95x45-assinar-preto.gif" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!" width="95" height="45" />
-                            </form>
-                        </center>
+                        <h5 class="center">Para pagar via cartão</h5>
+                        <p class="light"><sub>Esta opção contém taxa de R$3,48 da operadora do cartão.</sub></p>
+                       <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AYQ36hwFtoV-06-AdWQsaQWpLnxHWnWP5AoHKWZe8xNSPI0hTNzqkYNG5vNr3XNyPMZG1H1xvUxxaO9J&currency=BRL" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"BRL","value":63.48,"breakdown":{"item_total":{"currency_code":"BRL","value":60},"shipping":{"currency_code":"BRL","value":0},"tax_total":{"currency_code":"BRL","value":3.48}}}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+
                     </div>
-                    -->
                     <br>
                 </div>
                 <div class="col s12 m6">
