@@ -72,17 +72,13 @@
                         <h2 class="center red-text"><i class="material-icons">autorenew</i></h2>
                         <h5 class="center">Para pagar via cartão</h5>
                         <p class="light"><sub>Esta opção contém taxa de R$3,48 da operadora do cartão.</sub></p>
+                        <!---Inicio Botao -->
                        <div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
     </div>
-<div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=AYQ36hwFtoV-06-AdWQsaQWpLnxHWnWP5AoHKWZe8xNSPI0hTNzqkYNG5vNr3XNyPMZG1H1xvUxxaO9J&currency=BRL" data-sdk-integration-source="button-factory"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=BRL" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
       paypal.Buttons({
@@ -96,7 +92,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"BRL","value":63.48,"breakdown":{"item_total":{"currency_code":"BRL","value":60},"shipping":{"currency_code":"BRL","value":0},"tax_total":{"currency_code":"BRL","value":3.48}}}}]
+            purchase_units: [{"description":"Regularização Demolay Ativo","amount":{"currency_code":"BRL","value":63.48,"breakdown":{"item_total":{"currency_code":"BRL","value":60},"shipping":{"currency_code":"BRL","value":0},"tax_total":{"currency_code":"BRL","value":3.48}}}}]
           });
         },
 
@@ -113,7 +109,7 @@
     }
     initPayPalButton();
   </script>
-
+<!-- fim botao-->
                     </div>
                     <br>
                 </div>
