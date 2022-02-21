@@ -46,62 +46,52 @@
                 <div class="row center">
                 </div>
                 <div class="row center">
-                    <a href="https://bit.ly/2VZpbq4" id="download-button" class="btn-large waves-effect waves-light red">Fale com o MC</a>
+                    <a href="https://api.whatsapp.com/send?phone=5587988080532" id="download-button" class="btn-large waves-effect waves-light red">Fale com o MC</a>
                 </div>
             </div>
         </div>
         <div class="parallax"><img src="media/wall-dm.jpg" alt="Unsplashed background img 1"></div>
     </div>
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-a710d139-1940-49a8-8ad0-67e7df6b373b"></div>
     <div class="container">
         <div class="section">
             <!--   Icon Section   -->
             <div class="row">
-                <a href="rifa.html"><center><img src="media/banner-rifa.png" alt="Resultado Rifa" width="100%"></center></a>
-                <!-- Place <div> tag where you want the feed to appear -->
-                <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-                <h4 class="center">Regularização 2021</h4>
-                <h5 class="center">Valor Fixo: <b>R$60,00</b></h5>
+                    <h5 class="center">Mensalidade</h5>
+                    <p class="light center">Conforme aprovado em reunião, a mensalidade do Capítulo foi estipulado em <b>1,5%</b> do salário mínimo vigente para todos os demolays ativos.</p>
+                    <p class="light justify">A cobrança é recorrente, a cada 30 dias da primeira efetivação no cartão de crédito, podendo ser cancelada quando solicitado ao tesoureiro. Lembre-se, a captação da mensalidade é <b>FUNDAMENTAL</b> para execução das nossas atividades, confraternizações, projetos, filantrópias, auxilio em caso de necessidade, sendo todas elas amplamente discutidas antes em nosso grupo, tudo sempre ao bem de seus membros e pela causa da Ordem Demolay.</p>
+                    <br>
                 <br>
                     <div class="col s12 m6">
                     <div class="icon-block center" id="label2">
                         
-                        <h2 class="center red-text"><i class="material-icons">credit_card</i></h2>
-                        <h5 class="center">Para pagar via cartão</h5>
-                        <p class="light"><sub>Esta opção contém taxa de R$3,48 da operadora do cartão.</sub></p>
+                        <h2 class="center red-text"><i class="material-icons">stars</i></h2>
+                        <h5 class="center">Cartão de Crédito</h5>
+                        <p class="light">Corresponde a 1,5% do salário mínimo vigente</p>
+                        <i class="red-text material-icons">autorenew</i><b> R$18,18/mês</b><br>
                         <!---Inicio Botao -->
-                       <div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=AYQ36hwFtoV-06-AdWQsaQWpLnxHWnWP5AoHKWZe8xNSPI0hTNzqkYNG5vNr3XNyPMZG1H1xvUxxaO9J&currency=BRL" data-sdk-integration-source="button-factory"></script>
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
+                       <div id="paypal-button-container-P-1M579735LL604932JMHFPCVY"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AYQ36hwFtoV-06-AdWQsaQWpLnxHWnWP5AoHKWZe8xNSPI0hTNzqkYNG5vNr3XNyPMZG1H1xvUxxaO9J&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
           shape: 'rect',
-          color: 'gold',
+          color: 'silver',
           layout: 'vertical',
-          label: 'paypal',
-          
-        },
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{"description":"Regularização 2021 - Demolay","amount":{"currency_code":"BRL","value":63.48,"breakdown":{"item_total":{"currency_code":"BRL","value":60},"shipping":{"currency_code":"BRL","value":0},"tax_total":{"currency_code":"BRL","value":3.48}}}}]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Transaction completed by ' + details.payer.name.given_name + '!');
-          });
-        },
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-1M579735LL604932JMHFPCVY'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert('Assinatura Efetuada')
+      }
+  }).render('#paypal-button-container-P-1M579735LL604932JMHFPCVY'); // Renders the PayPal button
+</script>
 <!-- fim botao-->
                     </div>
                     <br>
@@ -109,25 +99,33 @@
                 <div class="col s12 m6">
                     <div class="icon-block center" id="label3">
                         <h2 class="center red-text"><i class="material-icons">account_balance</i></h2>
-                        <h5 class="center">Transferência Bancária/TED/PIX</h5>
-                        <p class="light">Informação bancária para uso geral.</p>
-<ul class="collapsible">
+                        <h5 class="center">PIX</h5>
+                        <p class="light"><b>Somente</b> semestral/anual para facilidade operacional.</p>
+                        <ul class="collapsible">
                             <li>
-                              <div class="collapsible-header"><img src="media/c6.png" width="30px">&nbsp Banco C6 S.A. &nbsp</div>
-                              <div class="collapsible-body">
-                                  <span>
-                            <p class="light"  align="left">
-                                <b>Banco:</b> C6 S.A. - 336<br>
-                                <b>Agência:</b> 0001<br>
-                                <b>Conta Corrente:</b> 58950-0<br>
-                                Ytalo Nascimento Simoa<br>
-                                (Consultor do Capítulo)
-                            </p>
-                            <p class="light"  align="center">
-                                <b>Chave PIX e-mail:</b> pix@guerreiros490.com.br<br>
-                                <img src="media/pixcap.png" width="100%"><br>
-                            </p>
-                                    </span>
+                              <div class="collapsible-header"><h4 class="red-text"><i class="material-icons">star_half</i></h4><br>Semestral - R$109,08</div>
+                              <div class="collapsible-body"><span>
+                                                                <p class="light"  align="center">
+                                                                    <b>Chave PIX:</b> pix@guerreiros490.com.br
+                                                                    <br>
+                                                                    <img src="media/2022-SEMESTRAL.png" width="100%"><br>
+                                                                </p>
+                                                                Pix copia e cola
+                                                                <textarea disabled>00020126460014BR.GOV.BCB.PIX0124pix@guerreiros490.com.br5204000053039865406109.085802BR5922Ytalo Nascimento Simoa6009Petrolina62200516DEMOLAYSEMESTRAL630469AC</textarea>
+                                                            </span>
+                                </div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><h4 class="red-text"><i class="material-icons">star</i></h4><br>Anual - R$218,16</div>
+                              <div class="collapsible-body"><span>
+                                                                <p class="light"  align="center">
+                                                                    <b>Chave PIX:</b> pix@guerreiros490.com.br
+                                                                    <br>
+                                                                    <img src="media/2022-ANUAL.png" width="100%"><br>
+                                                                </p>
+                                                                Pix copia e cola
+                                                                <textarea disabled>00020126460014BR.GOV.BCB.PIX0124pix@guerreiros490.com.br5204000053039865406218.165802BR5922Ytalo Nascimento Simoa6009Petrolina62160512DEMOLAYANUAL6304CE3F</textarea>
+                                                            </span>
                                 </div>
                             </li>
                         </ul>                        
