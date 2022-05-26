@@ -1,41 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="media/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="media/NRC-0-Emblema.png">
     <meta name="theme-color" content="#ffffff">
     <title>EPOC 2022 - Petrolina/PE</title>
+
     <!-- CSS  -->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="57x57" href="media/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="media/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="media/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="media/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="media/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="media/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="media/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="media/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="media/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="media/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="shortcut icon" href="/media/NRC-0-Emblema.png">
     <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
-<div id="smart-button-container">
+    <div class="navbar-fixed">
+        <nav class="black" role="navigation">
+            <div class="nav-wrapper container center">
+                <img src="https://demolaypernambuco.com/wp-content/uploads/2022/03/eventos-site.webp" alt="Unsplashed background img 1" height="100%">
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Navbar Link</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <div class="row center">
+                    <h2 class="header center white-text text-lighten-2">Bem-vindo!</h2>
+                    <h5 class="header col s12 light">O EPOC será realizado em Petrolina/PE no dia 11 de Junho de 2022</h5><br><p><b>Após efetuar o pagamento clique no botão abaixo para realizar sua inscrição.</b></p>
+                </div>
+                <div class="row center">
+                    <a href="http://bit.ly/EPOC2022" id="download-button" class="btn-large waves-effect waves-light green darken-4">Já efetuei o pagamento</a>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="/media/jd.png" alt="Unsplashed background img 1"></div>
+    </div>
+<div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m12">
+                    <h5 class="center">Quero efetuar o pagamento</h5>
+                    <p class="light center">Selecione a forma de pagamento desejada</p>
+                    <br>
+                </div>
+                <div class="col s12 m6">
+                    <div class="icon-block center" id="label3">
+                        <h2 class="center red-text"><i class="material-icons green-text">payment</i></h2>
+                        <h5 class="center">Cartão de Crédito</h5>
+                        <p class="light">Taxas operacionais já inclusas.</p>
+                        <b>(2º Lote) A partir de R$ 64,20*</b><br>
+                        <sub>*Desconto de 3% será aplicado no pagamento em 1X</sub>
+                        <ul class="collapsible">
+                            <li>
+                              <div class="collapsible-header"><h4 class="red-text"><i class="material-icons green-text">payment</i></h4><br>Cartao de Crédito - Em até 2X</div>
+                                <div class="collapsible-body">
+                                <br><b>1) Selecione a modalidade abaixo</b>
+                                <!-- Inicio Paypal-->  
+                                <div id="smart-button-container">
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
-<img src="https://demolaypernambuco.com/wp-content/uploads/2022/03/eventos-site.webp">
-          <p><b>EPOC 2022 - Pague aqui sua inscrição para o EPOC 2022 através de seu cartão de crédito!</b><br>
-Taxas operacionais serão por conta do participante.<br>Consulte no próprio sistema as possibilidades de parcelamento.</p>
-<p>Selecione a modalidade de inscrição abaixo e clique no botão <b>"Cartão de Débito ou Crédito"</b></p>
-          <select id="item-options"><option value="Sem Hospedagem" price="66.19">Sem Hospedagem - R$66,19</option><option value="Com Hospedagem" price="148.11">Com Hospedagem - R$148,11</option></select>
-          <select style="visibility: hidden" id="quantitySelect"></select>
+          <select id="item-options"><option value="Inscrição Sem Hospedagem" price="66.19">Inscrição Sem Hospedagem - R$ 66,19</option><option value="Inscrição Com Hospedagem" price="148.11">Inscrição Com Hospedagem - R$ 148,11</option></select>
+            <br><b>2) Quantas Pessoas?</b>
+          <select style="visibility: hidden" id="quantitySelect"><option value="1">Apenas eu</option><option value="2">Eu + 1 Pessoa</option><option value="3">Eu + 2 Pessoas</option><option value="4">Eu + 3 Pessoas</option></select>
+            <sub>3) Clique em "Cartão de Débito ou Crédito"</sub>
         </div>
       <div id="paypal-button-container"></div>
       </div>
@@ -119,8 +157,8 @@ Taxas operacionais serão por conta do participante.<br>Consulte no próprio sis
           // Show a success message within this page, e.g.
           const element = document.getElementById('paypal-button-container');
           element.innerHTML = '';
-          element.innerHTML = '<h3>Pagamento efetuado com sucesso!</h3>';
-
+          element.innerHTML = '<h3>Pagamento Efetuado com Sucesso!</h3>';
+          //actions.redirect('sucesso.html');
           // Or go to another URL:  actions.redirect('thank_you.html');
 
         });
@@ -132,5 +170,76 @@ Taxas operacionais serão por conta do participante.<br>Consulte no próprio sis
   }
   initPayPalButton();
     </script>
+                                <!-- fim Paypal-->
+                                </div>        
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                </div>
+                <div class="col s12 m6">
+                    <div class="icon-block center" id="label3">
+                        <h2 class="center red-text"><i class="material-icons green-text">swap_horiz</i></h2>
+                        <h5 class="center">PIX</h5>
+                        <p class="light">À vista</p>
+                        <b>(2º Lote) A partir de R$ 60,00</b><br>
+                        <ul class="collapsible">
+                            <li>
+                              <div class="collapsible-header"><h4 class="red-text"><i class="material-icons green-text">nature_people</i></h4><br>PIX - Inscrição Sem Hospedagem</div>
+                              <div class="collapsible-body">
+                                    <span>
+                                        <p class="light"  align="center">
+                                            <b>Valor:</b> R$ 60,00
+                                            <br><b>Chave PIX:</b> epoc@demolaypernambuco.com
+                                            <br>
+                                            <img src="media/60EPOC22.png" width="100%"><br>
+                                        </p>
+                                    <B>Pix copia e cola</B>
+                                    <textarea disabled>00020126480014BR.GOV.BCB.PIX0126epoc@demolaypernambuco.com520400005303986540560.005802BR5922Ytalo Nascimento Simoa6009Petrolina62100506EPOC226304A79F</textarea>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><h4 class="red-text"><i class="material-icons green-text">hotel</i></h4><br>PIX - Inscrição Com Hospedagem</div>
+                              <div class="collapsible-body">
+                                    <span>
+                                        <p class="light"  align="center">
+                                            <b>Valor:</b> R$ 135,00
+                                            <br><b>Chave PIX:</b> epoc@demolaypernambuco.com
+                                            <br>
+                                            <img src="media/135EPOC22.png" width="100%"><br>
+                                        </p>
+                                    <B>Pix copia e cola</B>
+                                    <textarea disabled>00020126480014BR.GOV.BCB.PIX0126epoc@demolaypernambuco.com5204000053039865406135.005802BR5922Ytalo Nascimento Simoa6009Petrolina62150511EPOC22HOTEL630458D3</textarea>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col 12 s12 center">
+                    <img src="/media/NRC-0-Emblema.png" width="200">
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p class="grey-text text-lighten-4 center">Priorado Cavaleiros do São Francisco Nº 84 - Petrolina/PE</p>
+            </div>
+        </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 </body>
+
 </html>

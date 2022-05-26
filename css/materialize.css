@@ -2960,6 +2960,10 @@ ul.staggered-list li {
   padding-top: 20px;
   color: #fff;
   background-color: #ee6e73;
+  background-image: url("https://sis.demolaybrasil.org.br/ava/imgs/bg.jpg");
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-footer .footer-copyright {

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="media/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>EPOC 2022 - Petrolina/PE</title>
+    <!-- CSS  -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="media/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="media/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="media/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="media/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="media/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="media/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="media/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="media/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.25rem;">
+<img src="https://demolaypernambuco.com/wp-content/uploads/2022/03/eventos-site.webp">
+          <p><b>EPOC 2022 - Pague aqui sua inscrição para o EPOC 2022 através de seu cartão de crédito!</b><br>
+Taxas operacionais serão por conta do participante.<br>Consulte no próprio sistema as possibilidades de parcelamento.</p>
+<p>Selecione a modalidade de inscrição abaixo e clique no botão <b>"Cartão de Débito ou Crédito"</b></p>
+          <select id="item-options"><option value="Sem Hospedagem" price="66.19">Sem Hospedagem - R$66,19</option><option value="Com Hospedagem" price="148.11">Com Hospedagem - R$148,11</option></select>
+          <select style="visibility: hidden" id="quantitySelect"></select>
+        </div>
+      <div id="paypal-button-container"></div>
+      </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AYQ36hwFtoV-06-AdWQsaQWpLnxHWnWP5AoHKWZe8xNSPI0hTNzqkYNG5vNr3XNyPMZG1H1xvUxxaO9J&enable-funding=venmo&currency=BRL" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        var shipping = 0;
+        var itemOptions = document.querySelector("#smart-button-container #item-options");
+    var quantity = parseInt();
+    var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+    if (!isNaN(quantity)) {
+      quantitySelect.style.visibility = "visible";
+    }
+    var orderDescription = 'EPOC 2022';
+    if(orderDescription === '') {
+      orderDescription = 'Item';
+    }
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+      createOrder: function(data, actions) {
+        var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+        var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+        if(quantitySelect.options.length > 0) {
+          quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+        } else {
+          quantity = 1;
+        }
+
+        tax *= quantity;
+        tax = Math.round(tax * 100) / 100;
+        var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+        priceTotal = Math.round(priceTotal * 100) / 100;
+        var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+
+        return actions.order.create({
+          purchase_units: [{
+            description: orderDescription,
+            amount: {
+              currency_code: 'BRL',
+              value: priceTotal,
+              breakdown: {
+                item_total: {
+                  currency_code: 'BRL',
+                  value: itemTotalValue,
+                },
+                shipping: {
+                  currency_code: 'BRL',
+                  value: shipping,
+                },
+                tax_total: {
+                  currency_code: 'BRL',
+                  value: tax,
+                }
+              }
+            },
+            items: [{
+              name: selectedItemDescription,
+              unit_amount: {
+                currency_code: 'BRL',
+                value: selectedItemPrice,
+              },
+              quantity: quantity
+            }]
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Pagamento efetuado com sucesso!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      },
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+    </script>
+</body>
+</html>
