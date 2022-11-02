@@ -2960,6 +2960,7 @@ ul.staggered-list li {
   padding-top: 20px;
   color: #fff;
   background-color: #ee6e73;
+    background: url(/media/bg_footer.png) center top no-repeat;
   background-position: relative;
   background-repeat: no-repeat;
   background-size: cover;
