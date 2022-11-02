@@ -3,30 +3,6 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-
-.quero {
-	background: url("https://guerreiros490.com.br/media/bg_quero.png") no-repeat cornflowerblue;
-	background-size: 30px;
-	background-position: 15px;
-	border-radius: 10px;
-	box-shadow: 2px 2px 6px -2px #000;
-	color: #FFF;
-	cursor: pointer;
-	display: inline-block;
-	font-weight: bold;
-	padding: 10px 20px 10px 56px;
-	position: fixed;
-	right: 15px;
-	bottom: 15px;
-	text-align: right;
-    transition: 0.5s;
-}
-
-.quero:hover
-{
-	background-color: #7AA9FF;
-}
-
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -9110,4 +9086,26 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem;
   }
+}
+.quero {
+	background: url("https://guerreiros490.com.br/media/bg_quero.png") no-repeat cornflowerblue;
+	background-size: 30px;
+	background-position: 15px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 6px -2px #000;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	padding: 10px 20px 10px 56px;
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	text-align: right;
+    transition: 0.5s;
+}
+
+.quero:hover
+{
+	background-color: #7AA9FF;
 }
