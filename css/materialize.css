@@ -5545,7 +5545,7 @@ button.btn-floating {
 }
 
 .dropdown-content {
-  background-color: #fff;
+  background-color: #000;
   margin: 0;
   display: none;
   min-width: 100px;
@@ -5565,7 +5565,7 @@ button.btn-floating {
 
 .dropdown-content li {
   clear: both;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(111, 111, 111, 0.87);
   cursor: pointer;
   min-height: 50px;
   line-height: 1.5rem;
@@ -5574,7 +5574,7 @@ button.btn-floating {
 }
 
 .dropdown-content li:hover, .dropdown-content li.active {
-  background-color: #eee;
+  background-color: #b71c1c;
 }
 
 .dropdown-content li:focus {
@@ -5588,7 +5588,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #26a69a;
+  color: #ffffff;
   display: block;
   line-height: 22px;
   padding: 14px 16px;
