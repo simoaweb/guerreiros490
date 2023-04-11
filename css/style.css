@@ -16,24 +16,32 @@ p {
 }
 
 .sidenav-trigger {
-  color: #b71c1c;
+  color: #26a69a;
 }
 
 .parallax-container {
-  min-height: 470px;
+  min-height: 480px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.banner {
+  background-image: url('../img/banner_historia.png');
+  height: 300px;
+  padding-top: 75px;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
+
   #index-banner .section {
     top: 10%;
   }
@@ -48,10 +56,30 @@ p {
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
   font-size: inherit;
 }
 
 footer.page-footer {
   margin: 0;
+}
+
+
+.quero {
+  background: url(../img/bg_quero.png) no-repeat cornflowerblue;
+  background-size: 30px;
+  background-position: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px -2px #000;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 20px 10px 56px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  text-align: right;
+  transition: 0.5s;
 }
